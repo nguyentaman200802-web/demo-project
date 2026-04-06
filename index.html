@@ -1,1 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Nguyen | Predictive Analytics Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --suffolk-blue: #003594;
+            --accent-gold: #ffc107;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --bg-gray: #f9f9f9;
+            --white: #ffffff;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--suffolk-blue);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--suffolk-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--suffolk-blue) 0%, #001d54 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--text-dark);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 25px;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--suffolk-blue);
+            margin-bottom: 10px;
+        }
+
+        .section-title div {
+            width: 50px;
+            height: 4px;
+            background: var(--accent-gold);
+            margin: 0 auto;
+        }
+
+        /* Grid for EDA and Results */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            transition: box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background: #eee; /* placeholder color */
+        }
+
+        /* Table Styling */
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: var(--suffolk-blue);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3436;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .bg-gray { background: var(--bg-gray); }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="logo">An Nguyen | ISOM 835</div>
+            <ul>
+                <li><a href="#about">Executive Summary</a></li>
+                <li><a href="#eda">EDA</a></li>
+                <li><a href="#models">Models</a></li>
+                <li><a href="#insights">Insights</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Predictive Analytics: [Project Title]</h1>
+            <p>Bridging Data Science & Business Strategy</p>
+            <a href="INSERT_YOUR_COLAB_URL_HERE" class="btn" target="_blank">View Python Notebook</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Executive Summary</h2>
+                <div></div>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p>As a dual MBA/MSBA student, I developed this project to solve [Problem Description]. Using Python and machine learning, I analyzed [Dataset Name] to provide actionable recommendations for [Stakeholders]. This site demonstrates the end-to-end workflow from raw data to business value.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="eda" class="bg-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>Exploratory Data Analysis</h2>
+                <div></div>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x250?text=Plot+1" alt="EDA Chart 1">
+                    <h3>Target Distribution</h3>
+                    <p>Briefly explain what this visualization tells the business about the target variable.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x250?text=Plot+2" alt="EDA Chart 2">
+                    <h3>Feature Correlation</h3>
+                    <p>Highlight the strongest predictors discovered during the exploration phase.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x250?text=Plot+3" alt="EDA Chart 3">
+                    <h3>Insight Summary</h3>
+                    <p>Explain how these findings informed your preprocessing (e.g., handling missing values).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="models">
+        <div class="container">
+            <div class="section-title">
+                <h2>Model Performance</h2>
+                <div></div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Model Type</th>
+                            <th>Accuracy / Metric</th>
+                            <th>Precision/Recall</th>
+                            <th>Key Tuning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Random Forest</strong></td>
+                            <td>89%</td>
+                            <td>0.87 / 0.84</td>
+                            <td>n_estimators=100, max_depth=10</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Logistic Regression</strong></td>
+                            <td>76%</td>
+                            <td>0.74 / 0.72</td>
+                            <td>StandardScaler applied</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="insights" class="bg-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>Business Insights & Ethics</h2>
+                <div></div>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>Recommendations</h3>
+                    <ul>
+                        <li>Focus marketing efforts on [Segment X].</li>
+                        <li>Implement early-warning systems for [Metric Y].</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Ethics & Fairness</h3>
+                    <p>Reflect on potential bias in the dataset and how the model should be deployed responsibly to ensure fairness across demographics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>An Nguyen | Suffolk University | MBA & MSBA Candidate 2027</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.6;">ISOM 835: Predictive Analytics & Machine Learning</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetSection = document.querySelector(targetId);
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Simple Fade-in effect on scroll
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
